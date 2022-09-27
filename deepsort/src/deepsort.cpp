@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include <string>
 #include <iostream>
+#include <mutex>
 
 #include "deepsort.h"
 #include "common.h"

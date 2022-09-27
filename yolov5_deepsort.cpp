@@ -14,7 +14,7 @@
 using namespace std;
 
 bool add_head = false;
-string PROJECT_DIR = "/mnt/yolov5-on-rk3588";
+string PROJECT_DIR = ".";
 string YOLO_MODEL_PATH = PROJECT_DIR + "/model/best_nofocus_relu.rknn";
 string SORT_MODEL_PATH = PROJECT_DIR + "/model/osnet_x0_25_market.rknn";
 
@@ -42,7 +42,6 @@ mutex mtxQueueOutput;
 queue<imageout_idx> queueOutput;  // output queue 目标追踪输出队列
 
 
-
 void videoRead(const char *video_name, int cpuid);
 void videoResize(int cpuid);
 void videoWrite(const char* save_path,int cpuid);
@@ -54,6 +53,7 @@ int main() {
 
     const int thread_num = 5;
     std::array<thread, thread_num> threads;
+    printf("test\n");
     videoRead(VIDEO_PATH.c_str(), 7);
     threads = {   
                   thread(&Yolo::detect_process, &detect1),  // 类成员函数特殊写法

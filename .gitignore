@@ -6,3 +6,11 @@ data/*
 
 .vscode
 make
+
+*.cmake 
+CMakeFiles
+Makefile
+CMakeCache.txt
+
+install/*
+install

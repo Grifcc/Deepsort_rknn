@@ -1,7 +1,13 @@
 #pragma once // 防止重定义
 #include <vector>
-#include "opencv2/opencv.hpp"
+#include <opencv2/core/core.hpp>
+#include <opencv2/videoio.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/imgproc.hpp>
 
+#include <iostream>
+#include  <mutex>
+#include <queue>
 #ifndef BOX_H
 #include "box.h"
 #define BOX_H

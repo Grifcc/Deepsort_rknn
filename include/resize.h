@@ -1,4 +1,4 @@
-#include "opencv2/opencv.hpp"
+#include <opencv2/opencv.hpp>
 #include "im2d.h"
 #include "RgaUtils.h"
 #include "rga.h"
@@ -20,7 +20,7 @@ public:
     int input_channel;
     double fx;  // scale along x
     double fy;  // scale along y
-    // init rga context
+    //init rga context
     rga_buffer_t src;
     rga_buffer_t dst;
     im_rect src_rect;

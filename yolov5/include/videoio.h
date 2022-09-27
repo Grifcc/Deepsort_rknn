@@ -1,4 +1,4 @@
-#include "opencv2/videoio/videoio_c.h"
+#include <opencv2/videoio/videoio_c.h>
 
 struct _detect_result_group_t;  // 前置声明
 

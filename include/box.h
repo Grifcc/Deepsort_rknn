@@ -1,7 +1,7 @@
 #ifndef BOX_H
 #define BOX_H
 #include <vector>
-#include "opencv2/opencv.hpp"
+#include <opencv2/opencv.hpp>
 
 // 标签
 #define OBJ_NAME_MAX_SIZE 16

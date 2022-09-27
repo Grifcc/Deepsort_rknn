@@ -1,15 +1,17 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-set(OpenCV_DIR /home/linaro/workspace/opencv/lib/cmake/opencv4)  # 填入OpenCVConfig.cmake
+set(OpenCV_DIR ${PROJECT_SOURCE_DIR}/3rdparty/opencv/lib/cmake/opencv4)  # 填入OpenCVConfig.cmake
 find_package(OpenCV 4 REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
+
 set(
     include_libs  
-    "${PROJECT_SOURCE_DIR}/include"
-    "${PROJECT_SOURCE_DIR}/deepsort/include"
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/deepsort/include
     ${PROJECT_SOURCE_DIR}/3rdparty/librknn_api/include
     ${PROJECT_SOURCE_DIR}/3rdparty/rga/include
+    ${PROJECT_SOURCE_DIR}/3rdparty/Eigen
 )
 
 set(

@@ -3,6 +3,8 @@
 
 #include "rknn_api.h"
 
+#include <queue>
+
 class rknn_fp{
 public:
     /*
